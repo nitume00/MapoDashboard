@@ -1,0 +1,15 @@
+{
+  "MySql": {
+    "dbConfig": {
+      "connectionLimit": 5,
+      "host": "localhost",
+      "user": "root",
+      "password": "password",
+      "database": "facebook"
+    }
+   },
+
+   "DBQuery": {
+    "GET_ALL_POST":"select * from post"
+  }
+}
