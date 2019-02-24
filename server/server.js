@@ -1,5 +1,6 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const cors = require('cors');
+const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
 const port = process.env.PORT || '3000';
@@ -9,6 +10,7 @@ const apirouter = require('./api');
 
 //to parse the data of post reqest to json
 app.use(bodyParser.json());
+app.use(cors());
 
 // to stop the url encoding in the request
 app.use(bodyParser.urlencoded({ extended: false }));

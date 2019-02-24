@@ -6,6 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BarChartDataResolve } from './resolver/bar.chart.resolver';
+
 
 @NgModule({
   declarations: [
@@ -16,9 +19,10 @@ import { PieChartComponent } from './components/pie-chart/pie-chart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChartsModule
+    ChartsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BarChartDataResolve],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

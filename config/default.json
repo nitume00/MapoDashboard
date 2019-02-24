@@ -5,11 +5,12 @@
       "host": "localhost",
       "user": "root",
       "password": "password",
-      "database": "facebook"
+      "database": "charts"
     }
    },
 
    "DBQuery": {
-    "GET_ALL_POST":"select * from post"
+    "GET_ALL_POST":"select * from post",
+    "GET_PIE_CHART":"Select concat(Jan, ',', Feb,',',Mar,',',Apr,',',May,',',Jun) as data, label from pichart;"
   }
 }

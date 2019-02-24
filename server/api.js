@@ -19,6 +19,21 @@ router.get('/', (req, res) => {
 
 });
 
+router.get('/bar', (req, res) => {
+  connPool.getConnection(function(err, connection) {
+    console.log("conneted to charts database successfully!..")
+    connection.query(DBQuery.GET_PIE_CHART,(err,result,fields)=>{
+      if(err){
+        console.error('error :',err.message);
+      }
+      res.send(result);
+    })
+    connection.release();
+  });
+
+});
+
+
 module.exports = router;
 
 
