@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BarChartDataResolve } from './resolver/bar.chart.resolver';
 
 const routes: Routes = [
-    {path: 'bar-chart', component: BarChartComponent, resolve : {barChartData: BarChartDataResolve}},
+    {path: 'bar-chart', component: BarChartComponent},
     {path: 'pie-chart', component: PieChartComponent},
     {path: '**', component: BarChartComponent }
 
